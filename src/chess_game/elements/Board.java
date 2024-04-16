@@ -1,4 +1,4 @@
-package chess_game;
+package chess_game.elements;
 
 import chess_game.pieces.*;
 
@@ -14,7 +14,8 @@ public class Board extends JPanel {
 
     public Board() {
 
-        this.setLayout(new GridLayout(8,8));
+        this.setLayout(new GridLayout());
+        this.setMinimumSize(new Dimension(Panel.FRAME_SIZE, Panel.FRAME_SIZE));
 
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
@@ -39,5 +40,7 @@ public class Board extends JPanel {
 //                }
 //            }
 //        }
+        this.revalidate();
+        this.repaint();
     }
 }

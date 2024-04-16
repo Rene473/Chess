@@ -1,9 +1,9 @@
-package chess_game;
+package chess_game.elements;
 
 import chess_game.pieces.Piece;
 
 import javax.swing.*;
-import java.awt.Color;
+import java.awt.*;
 
 public class Tile extends JPanel {
     private final int x;
@@ -14,6 +14,8 @@ public class Tile extends JPanel {
         this.x = x;
         this.y = y;
         this.piece = null;
+
+        this.setMinimumSize(new Dimension(Panel.FRAME_SIZE/8, Panel.FRAME_SIZE/8));
 
         if((x%2 == 1 && y%2 == 1) || (x%2 == 0 && y%2 == 0)) {
             this.setBackground(Color.WHITE);

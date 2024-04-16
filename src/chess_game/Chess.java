@@ -1,5 +1,7 @@
 package chess_game;
 
+import chess_game.elements.Panel;
+
 public class Chess {
     private final Panel panel;
     private Boolean whitesTurn = true;
